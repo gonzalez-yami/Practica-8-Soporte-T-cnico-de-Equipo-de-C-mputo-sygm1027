@@ -1,0 +1,125 @@
+<!-- Indica que es una página en HTML5 -->
+<!DOCTYPE html>
+
+<!-- Idioma de la página: Español -->
+<html lang="es">
+
+<head>
+    <!-- Para que se lean bien la ñ y las tildes -->
+    <meta charset="UTF-8">
+
+    <!-- Para que se adapte a celulares y computadoras -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña -->
+    <title>Soporte Técnico - Servicios</title>
+
+    <!-- Enlace a los estilos de color y diseño (CSS) -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Encabezado superior de la página -->
+    <header>
+        <!-- Título principal -->
+        <h1>Catálogo Completo de Servicios</h1>
+        <!-- Subtítulo breve -->
+        <p>Mantenimiento preventivo, correctivo y optimización de computadoras</p>
+    </header>
+
+    <!-- Menú con botones para cambiar de página -->
+    <nav>
+        <button onclick="window.location.href='index.html'">Inicio</button>
+        <button onclick="window.location.href='servicios.html'">Servicios y Precios</button>
+        <button onclick="window.location.href='contacto.html'">Solicitar Soporte</button>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección de contenido -->
+        <section>
+            <h2>Tabla de Servicios Técnicos</h2>
+            <p>Consulta los servicios disponibles, el detalle de lo que incluye cada uno y el tiempo estimado de entrega:</p>
+
+            <!-- Inicio de la tabla -->
+            <table>
+                <!-- Encabezados de las columnas -->
+                <thead>
+                    <!-- 'tr' es una fila -->
+                    <tr>
+                        <!-- 'th' es un título de columna -->
+                        <th>Categoría</th>
+                        <th>Servicio</th>
+                        <th>Detalle del trabajo</th>
+                        <th>Tiempo Est.</th>
+                    </tr>
+                </thead>
+
+                <!-- Datos de la tabla -->
+                <tbody>
+                    <tr>
+                        <!-- 'td' es una casilla de texto normal -->
+                        <td><b>Mantenimiento</b></td>
+                        <td>Preventivo General</td>
+                        <td>Limpieza de polvo, cambio de pasta térmica, lubricación de ventiladores y limpieza externa.</td>
+                        <td>2 a 3 hrs</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Software</b></td>
+                        <td>Desinfección de Virus</td>
+                        <td>Eliminación de malware, spyware, virus de acceso directo y optimización del arranque del sistema.</td>
+                        <td>1 a 2 hrs</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Sistema</b></td>
+                        <td>Formateo e Reinstalación</td>
+                        <td>Instalación limpia de Windows/macOS, controladores oficiales, paquetería básica y antivirus.</td>
+                        <td>3 a 4 hrs</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Hardware</b></td>
+                        <td>Actualización a SSD</td>
+                        <td>Cambio de disco duro mecánico por disco de estado sólido (SSD) y clonación de datos.</td>
+                        <td>2 hrs</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Hardware</b></td>
+                        <td>Reparación de Pantalla / Teclado</td>
+                        <td>Remplazo de piezas dañadas por caídas, derrames de líquido o falla de retroiluminación.</td>
+                        <td>24 hrs</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Redes</b></td>
+                        <td>Configuración de Red / Wi-Fi</td>
+                        <td>Diagnóstico de conectividad, configuración de routers y solución a problemas de IP/Internet.</td>
+                        <td>1 a 2 hrs</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Consejos Útiles para Cuidar tu Equipo</h3>
+
+            <!-- Lista con viñetas (puntos) -->
+            <ul>
+                <!-- 'li' es cada elemento de la lista -->
+                <li>Evita colocar laptops sobre camas o cobijas, ya que bloquean las salidas de aire y provocan sobrecalentamiento.</li>
+                <li>Realiza un mantenimiento físico preventivo por lo menos una vez al año.</li>
+                <li>Mantén tu sistema operativo y antivirus siempre actualizados.</li>
+                <li>Utiliza reguladores de voltaje para proteger la fuente de poder contra descargas eléctricas.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Pie de página (créditos) -->
+    <footer>
+        <p>Sofia Yamileth Gonzalez Mares 5-J 1027</p>
+    </footer>
+
+</body>
+</html>

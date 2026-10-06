@@ -1,0 +1,123 @@
+<!-- Indica que es una página en HTML5 -->
+<!DOCTYPE html>
+
+<!-- Idioma de la página: Español -->
+<html lang="es">
+<head>
+    <!-- Para que se lean bien la ñ y las tildes -->
+    <meta charset="UTF-8">
+
+    <!-- Para que se adapte a celulares y computadoras -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña -->
+    <title>Soporte Técnico - Formulario</title>
+
+    <!-- Enlace a los estilos de color y diseño (CSS) -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado principal de la página -->
+    <header>
+        <h1>Solicitud de Asistencia Técnica</h1>
+        <p>Registra los datos de tu equipo para recibir una evaluación previa</p>
+    </header>
+
+    <!-- Menú de navegación con botones -->
+    <nav>
+        <button onclick="window.location.href='index.html'">Inicio</button>
+        <button onclick="window.location.href='servicios.html'">Servicios y Precios</button>
+        <button onclick="window.location.href='contacto.html'">Solicitar Soporte</button>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <section>
+            <h2>Formulario de Registro de Falla</h2>
+            <p>Completa la información a continuación para preparar tu ficha de atención </p>
+
+            <!-- Formulario para recolectar datos del usuario -->
+            <form id="soporteForm" onsubmit="event.preventDefault(); alert('Solicitud registrada correctamente en pantalla. Ningún dato fue enviado ni guardado.'); this.reset();">
+                
+                <!-- Campo para el nombre -->
+                <div>
+                    <label for="nombre">Nombre completo del propietario:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana María Gómez" required>
+                </div>
+
+                <!-- Campo para el correo electrónico -->
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="usuario@ejemplo.com" required>
+                </div>
+
+                <!-- Campo para el teléfono -->
+                <div>
+                    <label for="telefono">Teléfono de contacto:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. 555-123-4567" required>
+                </div>
+
+                <!-- Menú desplegable para elegir tipo de equipo -->
+                <div>
+                    <label for="equipo">Tipo de equipo:</label>
+                    <select id="equipo" name="equipo">
+                        <option value="laptop">Laptop / Portátil</option>
+                        <option value="escritorio">Computadora de Escritorio (PC)</option>
+                        <option value="all_in_one">All-In-One (Todo en uno)</option>
+                        <option value="macbook">MacBook / iMac</option>
+                    </select>
+                </div>
+
+                <!-- Botones de opción única (radio) -->
+                <div>
+                    <label>Sistema Operativo instalado:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="so" value="Windows 11" checked> Windows 11</label>
+                        <label><input type="radio" name="so" value="Windows 10"> Windows 10</label>
+                        <label><input type="radio" name="so" value="macOS"> macOS</label>
+                        <label><input type="radio" name="so" value="Linux"> Linux</label>
+                    </div>
+                </div>
+
+                <!-- Casillas de verificación múltiple (checkbox) -->
+                <div>
+                    <label>Fallas o problemas detectados:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="falla" value="Lenta"> Equipo muy lento / Trabado</label>
+                        <label><input type="checkbox" name="falla" value="Encendido"> No enciende o se apaga sola</label>
+                        <label><input type="checkbox" name="falla" value="Virus"> Infección por virus / Anuncios</label>
+                        <label><input type="checkbox" name="falla" value="Pantalla"> Pantalla rota o azul</label>
+                        <label><input type="checkbox" name="falla" value="Internet"> Sin conexión a Internet</label>
+                    </div>
+                </div>
+
+                <!-- Menú desplegable para elegir la prioridad -->
+                <div>
+                    <label for="prioridad">Nivel de urgencia:</label>
+                    <select id="prioridad" name="prioridad">
+                        <option value="normal">Normal (24 a 48 horas)</option>
+                        <option value="alta">Alta (Mismo día)</option>
+                        <option value="urgente">Urgente (Atención prioritaria)</option>
+                    </select>
+                </div>
+
+                <!-- Creador de cuadro de texto largo para redactar la falla -->
+                <div>
+                    <label for="descripcion">Descripción detallada del problema:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe qué estaba haciendo cuando ocurrió la falla, ruidos extraños, mensajes de error, etc..."></textarea>
+                </div>
+
+                <!-- Botón para enviar el formulario -->
+                <button type="submit">Generar Solicitud de Soporte</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página (créditos) -->
+    <footer>
+        <p>Sofia Yamileth Gonzalez Mares 5-J 1027</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+/* --- ESTILOS GENERALES Y RESETEO --- */
+* {
+    /* Mantiene el tamaño real de la caja incluyendo bordes y relleno sin deformarla */
+    box-sizing: border-box; 
+    /* Espacio o alejamiento por FUERA del elemento */
+    margin: 0; 
+    /* Espacio o relleno por DENTRO del elemento */
+    padding: 0; 
+    /* Tipo de letra o tipografía */
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+body {
+    /* Color del fondo */
+    background-color: #f3effa; 
+    /* Color del texto */
+    color: #333; 
+    /* Relleno o espacio extra solo abajo */
+    padding-bottom: 70px; 
+}
+
+/* --- ENCABEZADO Y MENÚ --- */
+header {
+    background-color: #7c5295;
+    color: white;
+    /* Alineación del texto (centrado) */
+    text-align: center; 
+    padding: 25px 15px;
+}
+
+header h1 {
+    /* Margen o espacio libre hacia abajo */
+    margin-bottom: 5px; 
+}
+
+nav {
+    background-color: #b598d8;
+    text-align: center;
+    padding: 12px;
+}
+
+nav button {
+    background-color: #926fae;
+    color: white;
+    /* Quita la línea o borde alrededor del botón */
+    border: none; 
+    padding: 10px 18px;
+    margin: 3px 5px;
+    /* Tamaño del texto */
+    font-size: 15px; 
+    /* Cambia el puntero a una manita para saber que se le puede dar clic */
+    cursor: pointer; 
+    /* Redondea las esquinas */
+    border-radius: 5px; 
+    /* Hace que el cambio de color sea suave y progresivo */
+    transition: background-color 0.2s; 
+}
+
+/* Se activa solo al poner el cursor encima */
+nav button:hover {
+    background-color: #7c5295;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+main {
+    /* Ancho máximo permitido */
+    max-width: 800px; 
+    margin: 25px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    /* Agrega una sombra alrededor para dar efecto de profundidad */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+h2 {
+    color: #7c5295;
+    margin-bottom: 15px;
+    /* Dibuja una línea abajo */
+    border-bottom: 2px solid #f3effa; 
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #926fae;
+    /* Margen o espacio libre hacia arriba */
+    margin-top: 20px; 
+    margin-bottom: 10px;
+}
+
+p {
+    /* Altura o separación entre renglones de texto */
+    line-height: 1.6; 
+    margin-bottom: 12px;
+}
+
+ul, ol {
+    /* Margen del lado izquierdo (crea la sangría de la lista) */
+    margin-left: 25px; 
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background-color: #e5d9f2;
+    color: #5c3c70;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    /* Pone el texto en negrita */
+    font-weight: bold; 
+}
+
+/* --- TABLAS --- */
+table {
+    /* Ancho total del elemento */
+    width: 100%; 
+    /* Junta los bordes de la tabla para que no se vean dobles */
+    border-collapse: collapse; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+table, th, td {
+    /* Crea un borde definiendo grosor, tipo de línea y color */
+    border: 1px solid #b598d8; 
+}
+
+th {
+    background-color: #926fae;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+td.center {
+    text-align: center;
+}
+
+/* --- FORMULARIOS --- */
+form {
+    /* Crea una caja flexible para ordenar elementos fácilmente */
+    display: flex; 
+    /* Acomoda los elementos en fila vertical (uno abajo de otro) */
+    flex-direction: column; 
+    /* Espacio de separación entre cada elemento del formulario */
+    gap: 14px; 
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    /* Obliga al elemento a ocupar todo el ancho disponible y dar salto de línea */
+    display: block; 
+    margin-bottom: 4px;
+}
+
+/* Selecciona los elementos por su tipo */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"],
+select, 
+textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #b598d8;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    /* Permite que si los elementos no caben, pasen a la siguiente línea */
+    flex-wrap: wrap; 
+    gap: 15px;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    background-color: #7c5295;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #5c3c70;
+}
+
+/* --- PIE DE PÁGINA E IMÁGENES --- */
+footer {
+    background-color: #7c5295;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    /* Congela el elemento en la pantalla para que no se mueva al bajar */
+    position: fixed; 
+    /* Pega el elemento a la orilla inferior de la pantalla */
+    bottom: 0; 
+    width: 100%;
+}
+
+.imagen-soporte {
+    width: 100%;
+    /* Altura máxima permitida */
+    max-height: 550px; 
+    /* Recorta la imagen para que llene la caja sin estirarse ni deformarse */
+    object-fit: cover; 
+    border-radius: 8px;
+    border: 2px solid #b598d8;
+    margin-bottom: 15px;
+}
